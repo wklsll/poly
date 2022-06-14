@@ -8,9 +8,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="user-service" />
         <module name="first-demo" />
-        <module name="other-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="other-service" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
