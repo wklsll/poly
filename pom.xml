@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>user-service</module>
+        <module>other-server</module>
     </modules>
 <!--hello word 你好啊-->
 <!--poly-->
