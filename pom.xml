@@ -11,6 +11,7 @@
     <modules>
         <module>first-demo</module>
         <module>user-service</module>
+        <module>other-service</module>
     </modules>
 <!--hello word-->
 <!--poly-->

@@ -6,14 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="first-demo" />
         <module name="user-service" />
+        <module name="first-demo" />
+        <module name="other-service" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="first-demo" options="-parameters" />
+      <module name="other-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>
   </component>
