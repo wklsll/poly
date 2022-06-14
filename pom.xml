@@ -11,7 +11,7 @@
     <modules>
         <module>user-service</module>
     </modules>
-<!--hello word-->
+<!--hello word 你好啊-->
 <!--poly-->
 
     <parent>
