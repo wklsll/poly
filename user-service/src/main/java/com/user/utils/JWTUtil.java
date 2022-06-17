@@ -14,9 +14,9 @@ import java.util.Map;
 
 public class JWTUtil {
     //token有效时长
-    private static final long EXPIRE = 30 * 60 * 1000L;
+    private static final long EXPIRE = 60 * 1000L;
     //token的密钥 可自行定义
-    private static final String SECRET = "jwt";
+    private static final String SECRET = "jwtsss";
 
 
     public static String createToken(User user) throws UnsupportedEncodingException {
@@ -28,10 +28,12 @@ public class JWTUtil {
         map.put("alg", "HS256");
         map.put("typ", "JWT");
 
+
         //使用jwt的api生成token
         String token = JWT.create()
                 .withHeader(map)
                 .withClaim("username", user.getUserName())//私有声明
+                .withClaim("claim",new HashMap<>())
                 .withExpiresAt(date)//过期时间
                 .withIssuedAt(new Date())//签发时间
                 .sign(Algorithm.HMAC256(SECRET));//签名
