@@ -1,5 +1,6 @@
 package com.wkl.design;
 
+import annotation.IsSafe;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -7,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
  * 饿汉模式
  */
 @Slf4j
+@IsSafe
 public class Singleton1 {
     private final static Singleton1 singleton = new Singleton1();
     private Singleton1(){}

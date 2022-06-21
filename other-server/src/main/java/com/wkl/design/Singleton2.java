@@ -26,16 +26,16 @@ public class Singleton2 {
     }
 
     public static void main(String[] args) {
-        ExecutorService executor = Executors.newFixedThreadPool(50000);
-        for (int i =0;i<30000000;i++){
+        ExecutorService executor = Executors.newFixedThreadPool(10);
+        for (int i = 0; i < 30000; i++) {
             int finalI = i;
-            executor.execute(()->{
-                boolean equals = Singleton2.getInstance().equals(Singleton2.getInstance());
-               // log.info("{}", finalI);
-                if(!equals){
-                    log.info("{}",finalI);
-                    log.info("===================");
-                }
+            executor.execute(() -> {
+//                boolean equals = Singleton2.getInstance().equals(Singleton2.getInstance());
+//               // log.info("{}", finalI);
+//                if(!equals){
+                log.info("{}", finalI);
+                //log.info(i);
+//                }
             });
         }
         executor.shutdown();
