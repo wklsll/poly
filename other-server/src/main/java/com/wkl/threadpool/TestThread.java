@@ -1,4 +1,4 @@
-package threadpool;
+package com.wkl.threadpool;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

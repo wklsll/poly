@@ -1,6 +1,6 @@
 package com.wkl.design.singleton;
 
-import annotation.IsSafe;
+import com.wkl.annotation.IsSafe;
 import lombok.extern.slf4j.Slf4j;
 
 /**
