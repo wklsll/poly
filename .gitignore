@@ -1,3 +1,5 @@
 /.idea/
 /other-server/target/
 /user-server/target/
+/other-server/target/
+/user-service/target/

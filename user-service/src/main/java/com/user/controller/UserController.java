@@ -1,6 +1,8 @@
 package com.user.controller;
 import javax.servlet.http.HttpServletRequest;
 
+import com.user.annotion.Ljia;
+import com.user.annotion.Pauth;
 import com.user.utils.JWTUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -25,4 +27,13 @@ public class UserController {
         return "Hello";
     }
 
+
+
+    @GetMapping("/go")
+    @Pauth(require = false,name="666")
+    public String go(@Pauth(name = "hello") String a,@Pauth(require = true,name="nihao") String b,@Ljia(name="lijialijialijialijia") String c){
+
+        return "hello word";
+
+    }
 }
