@@ -11,6 +11,7 @@
     <modules>
         <module>user-service</module>
         <module>other-server</module>
+        <module>connect-mysql</module>
     </modules>
 <!--hello word 你好啊-->
 <!--poly-->
@@ -48,5 +49,15 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
+
+
+        <!-- hutool工具类 -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.6.7</version>
+        </dependency>
+
+
     </dependencies>
 </project>

@@ -19,7 +19,7 @@ public class PauthResolver implements HandlerMethodArgumentResolver {
     @Override
     public boolean supportsParameter(MethodParameter methodParameter) {
         log.error("0000000000000000000000000000000");
-        return methodParameter.hasParameterAnnotation(Pauth.class);
+        return methodParameter.hasParameterAnnotation(Pauth.class) || methodParameter.hasMethodAnnotation(Pauth.class);
     }
 
     @Override

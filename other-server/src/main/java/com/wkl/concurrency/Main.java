@@ -18,22 +18,19 @@ public class Main {
         for (int i = 0; i < clientTotal; i++) {
             executor.execute(() -> {
                 try {
-                    semaphore.acquire();
-                    add();
-                    semaphore.release();
+                   // semaphore.acquire();
+                  //  add();
+                    //semaphore.release();
                     countDownLatch.countDown();
-                } catch (InterruptedException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             });
         }
         executor.shutdown();
-        countDownLatch.await(3, TimeUnit.SECONDS);
+        countDownLatch.await();
       //  Thread.sleep(3000);
         log.info("count为：" + count);
     }
 
-    public static  void add() {
-        count++;
-    }
 }
