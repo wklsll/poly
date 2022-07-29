@@ -70,6 +70,7 @@ public class ZipUtils {
                         byte[] buf = new byte[BUFFER_SIZE];
                         zos.putNextEntry(new ZipEntry(srcFile.getName()));
                         int len;
+
                         FileInputStream in = new FileInputStream(srcFile);
                         while ((len = in.read(buf)) != -1) {
                             zos.write(buf, 0, len);
